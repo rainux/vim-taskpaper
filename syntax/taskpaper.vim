@@ -27,6 +27,7 @@ syn match taskpaperComment   /^.*$/ contains=taskpaperContext
 syn match taskpaperProject   /^.\+:\(\s\+@[^ \t(]\+\(([^)]*)\)\?\)*$/ contains=taskpaperContext
 syn match taskpaperListItem  /^\t*-\s\+/
 syn match taskpaperContext   /\s\zs@[^ \t(]\+\(([^)]*)\)\?/
+syn match taskpaperItemID    /\(^\t*- \)\@<=#\d\+/
 syn match taskpaperToday     /@today/
 syn match taskpaperUrgent    /@urgent/
 syn match taskpaperDone      /^.*\s@done\(\(\s\|([^)]*)\).*\)\?$/ contains=taskpaperToday,taskpaperUrgent
@@ -37,6 +38,7 @@ syn sync fromstart
 "highlighting for Taskpaper groups
 HiLink taskpaperListItem      Identifier
 HiLink taskpaperContext       String
+HiLink taskpaperItemID        Constant
 HiLink taskpaperToday         Search
 HiLink taskpaperUrgent        ErrorMsg
 HiLink taskpaperProject       Title
