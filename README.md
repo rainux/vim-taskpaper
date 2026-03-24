@@ -203,15 +203,15 @@ nnoremap <buffer> <silent> <Leader>tq
 
 ### Item ID highlighting
 
-Tasks can include a `#N` identifier right after the `- ` prefix for quick reference:
+Tasks can include a `%N` identifier right after the `- ` prefix for quick reference:
 
 ```taskpaper
 Project:
-	- #1 Implement feature A
-	- #2 Fix rendering bug @done(2026-03-23)
+	- %1 Implement feature A
+	- %2 Fix rendering bug @done(2026-03-23)
 ```
 
-The `#N` identifiers are highlighted using the `Constant` highlight group, making them visually distinct from tags and task text.
+The `%N` identifiers are highlighted using the `Constant` highlight group, making them visually distinct from tags and task text.
 
 ## Acknowledgements
 
